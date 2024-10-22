@@ -1,0 +1,125 @@
+/* Header */
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+#large-header {
+  background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg");
+}
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.2em; /* Tamanho padrão para desktop */
+}
+
+.demo-1 .main-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+  font-weight: 200;
+}
+
+/* Ajustes para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .demo-1 .main-title {
+    font-size: 3.5em; /* Aumenta o tamanho da fonte em dispositivos móveis */
+  }
+
+  .perfil img {
+    width: 180px; /* Aumenta a largura da imagem do perfil */
+    height: 180px; /* Aumenta a altura da imagem do perfil */
+  }
+
+  .perfil h2 {
+    font-size: 1.8em; /* Aumenta o tamanho do título */
+  }
+
+  .perfil p {
+    font-size: 1.2em; /* Aumenta o tamanho do texto */
+  }
+
+  .links img {
+    width: 60px; /* Aumenta a largura dos ícones */
+    height: 60px; /* Aumenta a altura dos ícones */
+  }
+}
+
+/* Perfil */
+.perfil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centraliza o texto da legenda */
+  z-index: 1; /* Garante que fique acima do canvas */
+}
+
+.perfil img {
+  width: 150px; /* Define a largura da imagem */
+  height: 150px; /* Define a altura da imagem */
+  border-radius: 50%; /* Faz a imagem ficar circular */
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+  border: 5px solid #f9f1e9; /* Adiciona uma borda ao redor da imagem */
+}
+
+.perfil figcaption {
+  color: #f9f1e9; /* Cor do texto */
+  margin-top: 10px; /* Espaçamento entre a imagem e a legenda */
+}
+
+.perfil h2 {
+  margin: 0;
+  font-size: 1.5em; /* Tamanho do título */
+}
+
+.perfil p {
+  margin: 0;
+  font-size: 1em; /* Tamanho do texto */
+  color: #aaa; /* Cor do texto da descrição */
+}
+
+/* Links */
+.links {
+  position: absolute; /* Permite posicionar as imagens logo abaixo do perfil */
+  top: 70%; /* Ajusta a posição vertical para ficar logo abaixo da div perfil */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição para centralizar */
+  display: flex; /* Alinha as imagens em linha */
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.links img {
+  width: 40px; /* Define a largura das imagens */
+  height: 40px; /* Define a altura das imagens */
+  object-fit: contain; /* Mantém a proporção da imagem */
+  filter: brightness(0) invert(1); /* Muda as imagens para a cor branca */
+}
+
+/* Ajustes adicionais para telas menores */
+@media only screen and (max-width: 480px) {
+  .links {
+    flex-wrap: nowrap; /* Garante que os links não quebrem para uma nova linha em telas menores */
+    top: 80%; /* Ajusta a posição vertical para ficar logo abaixo da div perfil em telas menores */
+  }
+  
+  .links img {
+    width: 50px; /* Aumenta a largura dos ícones para telas menores */
+    height: 50px; /* Aumenta a altura dos ícones para telas menores */
+  }
+}
